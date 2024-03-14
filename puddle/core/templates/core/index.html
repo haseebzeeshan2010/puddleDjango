@@ -3,47 +3,302 @@
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-    <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
-        <h2 class="mb-12 text-2xl text-center">Newest items</h2>
+<!--Hero Section--> 
 
-        <div class = "grid grid-cols-3 gap-2">
-            <!-- shows the newest items on front page -->
-            {% for item in items %} 
-                <div class="w-full">
-                    <a href="{% url 'item:detail' item.id %}">
-                        <div>
-                            <img src="{{ item.image.url }}" class="rounded-t-xl">
-                        </div>
+<section id ="hero" class="text-bg-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start text-shadow"> 
 
-                        <div class="px-3 py-6 bg-white rounded-b-xl">
-                            <h2 class="sm:text-2xl">{{ item.name }}</h2>
-                            <p class="text-gray-500">Price: {{ item.price }}</p>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+    <div class="container"> 
 
-    <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
-        <h2 class="mb-12 text-2xl text-center">Categories</h2>
+        <div class="d-sm-flex align-items-center justify-content-center"> 
 
-        <div class = "grid grid-cols-2 gap-4">
-            {% for category in categories %}
-                <div>
-                    <a href="#">
-                        <div>
-                            <img src="{{ item.image.url }}" class="rounded-t-xl">
-                        </div>
+            <div> 
 
-                        <div class="p-6 bg-white rounded-b-xl">
-                            <h2 class="sm:text-2xl">{{ category.name }}</h2>
-                            <p class="text-gray-500">{{ category.items.count }} items</p>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-            
+                <h1 class="mx-2"style= "text-shadow:0 0 1px #ddd"> <span class="text-info mx-2" style= "text-shadow:2px 2px 4px #333"> Code </span> your imagination</h1> 
+
+            </div> 
+
+            <div>  
+
+                <!--Image in showcase-->  
+
+                <img class="img-fluid mt-5 mx-3  d-sm-block rounded-circle mb-5 shadow"src="img/bg2.svg" alt="person doing work on computer"> 
+
+            </div> 
+
+        </div> 
+
+         
+
+    </div> 
+
+</section> 
+
+ 
+
+<section id="blogs" class="p-5 mt-5 mb-5" > 
+
+    <!--Make container--> 
+
+    <div class="container"> 
+
+        <h2 class="mb-5 text-center"> 
+
+            BLOGS 
+
+        </h2> 
+
+        <!--Then row with text center and gap in y-axis gy and gx for x-axis --> 
+
+        <div class="row text-center g-4"> 
+
+            <!--Then column--> 
+
+            <div class="col-md"> 
+
+                <!--Inside column give card the background and text color--> 
+
+                <div class="card bg-light text-dark"> 
+
+                    <!--Then give card body with text in center--> 
+
+                    <div class="card-body text-center"> 
+
+                        <!--For icon to look big use h1 as class--> 
+
+                        <div class="mb-5"> 
+
+                            <!--Image--> 
+
+                            <img class="rounded-circle shadow w-50 mb-5 mt-5"src="img/illusion.svg" alt="moving dot illusion"> 
+
+                        </div> 
+
+                        <!--Now give title--> 
+
+                        <h3 class="card-title mb-3 fw-medium"> 
+
+                            Moving Dots 
+
+                        </h3> 
+
+                        <!--Give then text--> 
+
+                        <a href="https://naziafakhruddin.medium.com/creating-illusions-in-p5-js-part-3-moving-dot-illusion-a67157723838" class="btn btn-dark w-50 fs-5 mt-3 mb-5"> 
+
+                            Read  
+
+                        </a> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+            <div class="col-md "> 
+
+                <div class="card bg-light text-dark"> 
+
+                    <div class="card-body text-center "> 
+
+                        <div class="mb-5"> 
+
+                            <img class="rounded-circle shadow w-50 mb-5 mt-5 "src="img/holo.svg" alt="3d hologram"> 
+
+                        </div> 
+
+                        <h3 class="card-title mb-3"> 
+
+                                3D Hologram 
+
+                        </h3> 
+
+                        <a href="https://naziafakhruddin.medium.com/making-3d-hologram-5197f76b07a5" class="btn btn-dark w-50 fs-5 mt-3 mb-5"> 
+
+                            Read  
+
+                        </a> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+            <div class="col-md "> 
+
+                <div class="card bg-light text-dark "> 
+
+                    <div class="card-body text-center"> 
+
+                        <div class="mb-5"> 
+
+                            <img class="rounded-circle w-50 mb-5 mt-5"src="img/gesture.svg" alt="multicoloured flowers"> 
+
+                        </div> 
+
+                        <h3 class="card-title mb-3"> 
+
+                            Gesture Art 
+
+                        </h3> 
+
+                        <a href="https://naziafakhruddin.medium.com/gesture-controlled-flower-art-with-ml5-js-posenet-and-p5-js-61b98fa3fc68" class="btn btn-dark w-50 fs-5 mt-3 mb-5"> 
+
+                            Read  
+
+                        </a> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+ 
+
+<section id ="videos" class="text-bg-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start text-shadow"> 
+
+    <div class="container"> 
+
+        <div class="d-sm-flex align-items-center justify-content-center"> 
+
+            <div> 
+
+                <h1 class="mx-2"style= "text-shadow:0 0 1px #ddd">Watch Computing Masterclass channel on YouTube</h1> 
+
+                <a href="https://www.youtube.com/@ComputingMasterclass" class="btn btn-info w-50 fs-4 text-white fw-medium mx-3 mt-5 mb-5"> 
+
+                    Watch our videos 
+
+                </a> 
+
+            </div> 
+
+            <div>  
+
+                <!--Image in showcase-->  
+
+                <img class="img-fluid mt-5 mx-3  d-sm-block rounded-circle mb-5 shadow"src="img/hotair.svg" alt="hotair balloon"> 
+
+            </div> 
+
+             
+
+        </div> 
+
+         
+
+    </div> 
+
+</section> 
+
+<!--Section of cards--> 
+
+ 
+
+<section id="publications" class="p-5 mt-5 mb-5"> 
+
+    <!--Make container--> 
+
+    <div class="container"> 
+
+        <h2 class="mb-5 text-center"> 
+
+            PUBLICATIONS 
+
+        </h2> 
+
+        <!--Then row with text center and gap in y-axis gy and gx for x-axis --> 
+
+        <div class="row text-center g-4"> 
+
+            <!--Then column--> 
+
+            <div class="col-md"> 
+
+                <!--Inside column give card the background and text color--> 
+
+                <div class="card bg-light text-dark"> 
+
+                    <!--Then give card body with text in center--> 
+
+                    <div class="card-body text-center"> 
+
+                        <!--For icon to look big use h1 as class--> 
+
+                        <div class="mb-5"> 
+
+                            <!--Image--> 
+
+                            <img class=" shadow w-50 mb-3 mt-5 "src="img/book1.png" alt="book cover"> 
+
+                        </div> 
+
+                        <!--Now give title--> 
+
+                        <h3 class="card-title mb-3"> 
+
+                            Superfun p5.js projects 
+
+                        </h3> 
+
+                        <!--Give then text--> 
+
+                        <a href="https://www.amazon.co.uk/Superfun-P5-js-Projects-Nazia-Fakhruddin-ebook/dp/B07YP1M69Q" class="btn btn-dark text-white w-50 fw-medium fs-5 mt-3 mb-5"> 
+
+                            Buy  
+
+                        </a> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+            <div class="col-md "> 
+
+                <div class="card bg-light text-dark"> 
+
+                    <div class="card-body text-center "> 
+
+                        <div class="mb-5"> 
+
+                            <img class=" shadow w-50 mb-3 mt-5 border-dark"src="img/book2.png" alt="book cover"> 
+
+                        </div> 
+
+                        <h3 class="card-title mb-3"> 
+
+                            Fun art projects in p5.js 
+
+                        </h3> 
+
+                        <a href="https://www.amazon.co.uk/Fun-Art-Projects-P5-js-Beginners-ebook/dp/B08685B2T1" class="btn btn-dark text-white w-50 fw-medium fs-5 mt-3 mb-5"> 
+
+                            Buy  
+
+                        </a> 
+
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+</section> 
+
+
+
 {% endblock %}
