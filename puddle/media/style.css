@@ -1,0 +1,52 @@
+body::before{
+    display:block;
+    content:"";
+    height:60px;
+    
+}
+body{
+    background:white;   
+}
+
+#videos{
+    background-image: url('static_img/bg.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center fixed; 
+    text-shadow:20px; 
+}
+#hero{
+    background-image: url('static_img/bg3.svg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center fixed; 
+    text-shadow:20px; 
+}
+#tutorial{
+    background-image: url('static_img/bg2.svg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center fixed; 
+    text-shadow:20px; 
+}
+
+/* #card{
+    width:110px;
+    height:210px;
+    background-size: cover;
+} */
+
+p{
+    font-size: 30px;
+    letter-spacing:0.015em;
+}
+#carousel img{
+    width:100%;
+    height:20px;
+}
+
+@media(min-width:768px){
+    .news-input{
+        width:50%;
+    }
+}
